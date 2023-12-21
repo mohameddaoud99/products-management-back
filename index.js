@@ -60,6 +60,19 @@ app.all('*', (req, res) => {
   }
 })
 
+app= async (req, res) => {
+  // Your API logic here
+
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
+  // Your response
+  res.status(200).json({ message: 'Success' });
+};
+
 mongoose.set("strictQuery", false)
 mongoose.
 connect('mongodb+srv://mohameddaoud99:yNDLAWlTL9vtNNag@cluster0.jaaqxok.mongodb.net/?retryWrites=true&w=majority')
