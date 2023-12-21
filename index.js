@@ -44,8 +44,8 @@ app.get('/', (req, res) => {
 })
 
 // Routes
-app.use('https://products-management-back.vercel.app', require('./routes/api/auth'))
-app.use('https://products-management-back.vercel.app', require('./routes/api/product'))
+app.use('https://products-management-back.vercel.app/api/auth/', require('./routes/api/auth'))
+app.use('https://products-management-back.vercel.app/api/products/', require('./routes/api/product'))
 
 app.all('*', (req, res) => {
   res.status(404)
