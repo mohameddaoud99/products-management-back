@@ -4,14 +4,14 @@ const productController = require('../../controllers/productController')
 const authMiddleware = require('../../middleware/auth')
 
 
-router.get('/getAllProducts',authMiddleware, productController.getAllProducts)
+router.get('products/getAllProducts',authMiddleware, productController.getAllProducts)
 
-router.get('/getProductById/:id',authMiddleware, productController.getProductById)
+router.get('products/getProductById/:id',authMiddleware, productController.getProductById)
 
-router.post('/addProduct',authMiddleware, productController.addProduct)
+router.post('products/addProduct',authMiddleware, productController.addProduct)
 
-router.put('/updateProduct/:id',authMiddleware, productController.updateProduct)
+router.put('products/updateProduct/:id',authMiddleware, productController.updateProduct)
 
-router.delete('/deleteProduct/:id', authMiddleware, productController.deleteProduct)
+router.delete('products/deleteProduct/:id', authMiddleware, productController.deleteProduct)
 
 module.exports = router
