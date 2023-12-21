@@ -37,6 +37,11 @@ app.use(authenticationMiddleware)
 // static files
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
+app.get('/', (req, res) => {
+  res.send('Hello NODE API')
+})
+
+
 // Default error handler
 app.use(errorHandlerMiddleware)
 
