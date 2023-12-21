@@ -5,7 +5,7 @@ const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const mongoose = require('mongoose')
 const path = require('path')
-const corsOptions = require('./config/cors')
+//const corsOptions = require('./config/cors')
 //const connectDB = require('./config/database')
 const credentials = require('./middleware/credentials')
 const errorHandlerMiddleware = require('./middleware/error_handler')
@@ -20,7 +20,13 @@ const PORT = 3500
 app.use(credentials)
 
 // CORS
-app.use(cors(corsOptions))
+app.use(cors(
+  {
+    origin:["http://127.0.0.1:5173"],
+    methods :["GET","OPTIONS","PATCH","DELETE","POST","PUT"],
+    credentials:true
+  }
+))
 
 // application.x-www-form-urlencoded
 app.use(express.urlencoded({ extended: false }))
