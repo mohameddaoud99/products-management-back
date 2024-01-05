@@ -15,3 +15,4 @@ router.put('/updateProduct/:id',authMiddleware, productController.updateProduct)
 router.delete('/deleteProduct/:id', authMiddleware, productController.deleteProduct)
 
 module.exports = router
+
