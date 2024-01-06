@@ -17,7 +17,7 @@ app.use(credentials);
 
 // CORS
 app.use(cors({
-  origin: ["http://127.0.0.1:5173"],
+  origin: ["https://pm-frontend-dkm.pages.dev"],
   methods: ["GET", "OPTIONS", "PATCH", "DELETE", "POST", "PUT"],
   credentials: true,
 }));
@@ -60,7 +60,7 @@ app.all('*', (req, res) => {
 // Your API logic here
 app.get('/your-api-endpoint', (req, res) => {
   // Set CORS headers
-  res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5173');
+  res.setHeader('Access-Control-Allow-Origin', 'https://pm-frontend-dkm.pages.dev');
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
