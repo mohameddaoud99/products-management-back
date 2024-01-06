@@ -9,7 +9,7 @@
       "src": "/.*",
      "dest": "/index.js",
      "headers": {
-      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Origin": "https://pm-frontend-dkm.pages.dev",
       "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
     }
    }
